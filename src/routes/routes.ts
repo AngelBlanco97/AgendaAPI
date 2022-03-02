@@ -18,7 +18,7 @@ export class Routes {
     this.router.put("/contactos/:idContacto", (req: Request, res: Response) => {
       Controller.putContacto(req, res);
     });
-    this.router.delete("/contactos/:idContacto", (req: Request, res: Response) => {
+    this.router.delete("/deleteContacto/:idContacto", (req: Request, res: Response) => {
       Controller.deleteContacto(req, res);
     });
   }

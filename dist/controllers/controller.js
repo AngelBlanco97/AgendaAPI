@@ -54,11 +54,8 @@ class Controller {
     }
     deleteContacto(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const contacto = yield agenda_1.default.deleteOne({ _id: req.params.idTask });
-            if (contacto) {
-                return res.status(200).json({ res: "Contacto eliminado" });
-            }
-            return res.status(404).json({ res: "No se pudo eliminar el contacto" });
+            const contacto = yield agenda_1.default.deleteOne({ _id: req.params.idContacto });
+            return res.status(200).json({ res: "Contacto eliminado" });
         });
     }
 }

@@ -21,7 +21,7 @@ class Routes {
         this.router.put("/contactos/:idContacto", (req, res) => {
             controller_1.default.putContacto(req, res);
         });
-        this.router.delete("/contactos/:idContacto", (req, res) => {
+        this.router.delete("/deleteContacto/:idContacto", (req, res) => {
             controller_1.default.deleteContacto(req, res);
         });
     }

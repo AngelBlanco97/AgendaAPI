@@ -36,12 +36,10 @@ class Controller {
         return res.status(404).json({ Error: "Error al modificar el contacto" });
       }
       public async deleteContacto(req: Request, res: Response) {
-        const contacto = await Agenda.deleteOne({ _id: req.params.idTask });
-        if (contacto) {
+        const contacto = await Agenda.deleteOne({ _id: req.params.idContacto });
+        
           return res.status(200).json({ res: "Contacto eliminado" });
-        }
     
-        return res.status(404).json({ res: "No se pudo eliminar el contacto" });
       }
 }
 
